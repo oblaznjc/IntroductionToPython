@@ -118,7 +118,7 @@ reed.forward(200)
 reed.speed = 10
 reed.right(45*44)
 reed.speed = 1
-reed.forward(200)
+reed.forward(250)
 ########################################################################
 #
 # DONE: 5.
