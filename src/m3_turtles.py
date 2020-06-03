@@ -62,23 +62,24 @@ bill = rg.SimpleTurtle()
 # ----------------------------------------------------------------------
 bill.left(90)
 bill.left(90)
-bill.forward(1000)
-bill.left(1000)
-bill.speed = 6
+bill.forward(10)
+bill.speed = 10
+bill.forward(300)
+
 # ----------------------------------------------------------------------
 # Construct a new turtle and ask it to do things.
 # ----------------------------------------------------------------------
 matt = rg.SimpleTurtle('turtle')
 matt.pen = rg.Pen('orange', 30)
-matt.speed = 1  # Faster
-matt.backward(50)
+matt.speed = .1  # Faster
+matt.backward(300)
 matt.left(90)
 matt.forward(50)
 
 
 ########################################################################
 #
-# TODO: 3.
+# DONE: 3.
 #   Add a few more line of your own code above to make one of the
 #   existing Turtles move some more and/or have different
 #   characteristics.
@@ -92,9 +93,10 @@ matt.forward(50)
 
 ########################################################################
 #
-# TODO: 4.
+# DONE: 4.
 #   The code above  CONSTRUCTS  two SimpleTurtle objects and gives those objects NAMES:
-#       dave    matt
+#       bill    matt
+#   (Jacob Oblazny renamed dave to bill)
 #
 #   Below this TO DO comment construct another SimpleTurtle object,
 #       naming it whatever you want.
@@ -110,10 +112,16 @@ matt.forward(50)
 #   As always, test by running the module.
 #
 ########################################################################
-
+reed = rg.SimpleTurtle('turtle')
+reed.right(45)
+reed.forward(200)
+reed.speed = 10
+reed.right(45*44)
+reed.speed = 1
+reed.forward(200)
 ########################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   Run one more time to be sure that all is still OK.
 #   Ensure that no blue bars on the scrollbar-thing to the right remain.
 #
