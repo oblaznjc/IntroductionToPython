@@ -10,11 +10,11 @@ Also:
   -- ASSIGNING a VALUE to a NAME (VARIABLE).
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Jacob Oblazny.
 """
 ########################################################################
 #
-# TODO: 1.
+# DONE: 1.
 #  (Yes, that means for YOU to DO things per these instructions:)
 #
 # On Line 13 above, replace  PUT_YOUR_OWN_NAME_HERE  with your OWN name.
@@ -29,7 +29,7 @@ import rosegraphics as rg
 
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   Allow this file to use the rosegraphics.py file by marking the src
 #   directory as a "Sources Root".  Do that by right clicking on the src folder,
 #   then selector  Mark Directory As --> Sources Root
@@ -55,21 +55,22 @@ window.delay(20)  # Bigger numbers mean slower animation.
 # ----------------------------------------------------------------------
 # Makes (constructs) a   SimpleTurtle   object.
 # ----------------------------------------------------------------------
-dave = rg.SimpleTurtle()
+bill = rg.SimpleTurtle()
 
 # ----------------------------------------------------------------------
 # Ask the SimpleTurtle objects to do things:
 # ----------------------------------------------------------------------
-dave.forward(100)
-dave.left(90)
-dave.forward(200)
-
+bill.left(90)
+bill.left(90)
+bill.forward(1000)
+bill.left(1000)
+bill.speed = 6
 # ----------------------------------------------------------------------
 # Construct a new turtle and ask it to do things.
 # ----------------------------------------------------------------------
 matt = rg.SimpleTurtle('turtle')
-matt.pen = rg.Pen('red', 30)
-matt.speed = 10  # Faster
+matt.pen = rg.Pen('orange', 30)
+matt.speed = 1  # Faster
 matt.backward(50)
 matt.left(90)
 matt.forward(50)
