@@ -112,7 +112,7 @@ matt.forward(50)
 #   As always, test by running the module.
 #
 ########################################################################
-reed = rg.SimpleTurtle('turtle')
+reed = rg.SimpleTurtle("turtle")
 reed.right(45)
 reed.forward(200)
 reed.speed = 10
