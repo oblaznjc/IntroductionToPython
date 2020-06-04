@@ -30,43 +30,58 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 ########################################################################
 
 import rosegraphics as rg
+import math
+sqrt2 = math.sqrt(2)
+degree = 30
 window = rg.TurtleWindow()
 
-# turtles
+# construct turtles
 blue_turtle = rg.SimpleTurtle('turtle')
-blue_turtle.pen = rg.Pen('blue', 10)
-blue_turtle.speed = 1 # Fast
-
 pink_turtle = rg.SimpleTurtle('turtle')
-pink_turtle.pen = rg.Pen('pink', 1)
-pink_turtle.speed = 1  # Fast
 
 # set turtles starting position
+degrees_right = 45
+reset_degrees = 180 + degrees_right
+length_forward = 200
 blue_turtle.pen_up()
-blue_turtle.right(135)
-blue_turtle.forward(400)
-blue_turtle.right(135)
+blue_turtle.right(degrees_right)
+blue_turtle.forward(length_forward)
+blue_turtle.right(reset_degrees)
+
+pink_turtle.pen_up()
+pink_turtle.right(degrees_right)
+pink_turtle.forward(length_forward)
+pink_turtle.right(reset_degrees + degree)
 # The first square will be 300 x 300 pixels:
-size = 200
+size = 244
 
 # Do the indented code 13 times.  Each time draws a square.
-for k in range(20):
+for k in range(13):
 
     # Put the pen down, then draw a square of the given size:
-    blue_turtle.pen = rg.Pen('blue', 1+k)
+    blue_turtle.pen = rg.Pen('blue', 13*(1/(1+k)))
     blue_turtle.speed = 2*k  # Fast
     blue_turtle.pen_down()
-    blue_turtle.draw_square(-size)
+    blue_turtle.left(degree)
+    blue_turtle.draw_square(size)
+
+    pink_turtle.pen = rg.Pen('pink', 13 * (1 / (1 + k)))
+    pink_turtle.speed = 2 * k  # Fast
+    pink_turtle.pen_down()
+    pink_turtle.left(degree)
+    pink_turtle.forward(size)
 
     # Move a little below and to the right of where the previous
     # square started.  Do this with the pen up (so nothing is drawn).
     blue_turtle.pen_up()
-    blue_turtle.right(45)
-    blue_turtle.forward(size*.8)
-    blue_turtle.left(45)
+    blue_turtle.right(degree)
+    blue_turtle.forward(size)
+    blue_turtle.left(degree)
+
+
 
     # Put the pen down again (so drawing resumes).
     # Make the size for the NEXT square be 12 pixels smaller.
     blue_turtle.pen_down()
-    size *= .8
+    size /= sqrt2
 window.close_on_mouse_click()
